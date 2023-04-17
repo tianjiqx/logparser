@@ -7,7 +7,9 @@ License: MIT
 import sys
 import os
 import gc
-import re
+# import re
+import regex as re
+
 import hashlib
 import math
 import pandas as pd
@@ -77,7 +79,8 @@ class LogParser(object):
                 self.templates[template]['count'] += 1
         print('Second pass done.')
 
-        self.df_log['EventId'] = map(lambda x: self.templates[x]['id'], templatel)
+        # self.df_log['EventId'] = map(lambda x: self.templates[x]['id'], templatel)
+        self.df_log['EventId'] = [self.templates[x]['id'] for x in templatel]
         self.df_log['EventTemplate'] = templatel
         self.dump_results()
 

@@ -9,7 +9,8 @@ import random
 import math
 import time
 import operator
-import re
+# import re
+import regex as re
 import os
 import pandas as pd
 import hashlib

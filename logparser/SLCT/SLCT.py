@@ -8,7 +8,8 @@ sys.path.append('../')
 
 import hashlib
 import pandas as pd
-import re
+# import re
+import regex as re
 from datetime import datetime
 from ..logmatch import regexmatch
 import subprocess

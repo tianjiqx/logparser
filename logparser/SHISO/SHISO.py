@@ -4,11 +4,12 @@ Author      : LogPAI team
 License     : MIT
 """
 
-import re
+import regex as re
+# import re
 import os
 import time
 from nltk import ngrams
-from Queue import *
+from queue import *
 import numpy as np
 import pandas as pd
 import hashlib
@@ -135,8 +136,9 @@ class LogParser:
             i += 1
 
 
-        for idx in xrange(i, len(largeSeq)):
-            word2 = largeSeq[i]
+        for idx in range(i, len(largeSeq)):
+            # word2 = largeSeq[i]
+            word2 = largeSeq[idx]
             numerator += self.wordDist( '', word2 )
 
         return float(numerator) / (2*len(largeSeq))

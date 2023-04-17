@@ -6,7 +6,9 @@ License     : MIT
 
 import os
 import pandas as pd
-import re
+# import re
+import regex as re
+
 import hashlib
 from datetime import datetime
 import subprocess

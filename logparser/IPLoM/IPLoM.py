@@ -9,7 +9,9 @@ import sys
 from datetime import datetime
 import os
 import gc
-import re
+# import re
+import regex as re
+
 import pandas as pd
 import hashlib
 import string

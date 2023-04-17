@@ -5,7 +5,8 @@ License     : MIT
 """
 
 import sys
-import re
+# import re
+import regex as re
 import os
 import numpy as np
 import pandas as pd
@@ -205,7 +206,7 @@ class LogParser:
         if self.keep_para:
             self.df_log["ParameterList"] = self.df_log.apply(self.get_parameter_list, axis=1) 
         self.df_log.to_csv(os.path.join(self.savePath, self.logname + '_structured.csv'), index=False)
-        df_event.to_csv(os.path.join(self.savePath, self.logname + '_templates.csv'), index=False)
+        # df_event.to_csv(os.path.join(self.savePath, self.logname + '_templates.csv'), index=False)
 
     def printTree(self, node, dep):
         pStr = ''   
